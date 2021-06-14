@@ -1,0 +1,7 @@
+FROM node:14
+
+COPY ./interface/ /home/ubuntu/openuba-ui/
+WORKDIR /home/ubuntu/openuba-ui/
+RUN npm install && npm run build
+
+CMD npm start

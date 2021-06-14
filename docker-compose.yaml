@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  openuba-server:
+    build:
+      context: .
+      dockerfile: DockerfileServer
+    ports:
+      - 5000:5000
+  openuba-ui:
+    build:
+      context: .
+      dockerfile: DockerfileUI
+    ports:
+      - 3000:3000
+    stdin_open: true
+
+
