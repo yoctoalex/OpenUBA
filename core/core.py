@@ -139,7 +139,7 @@ class Core:
         self.run_display_information_job()
 
         #begin flask server, after initiation tasks
-        server.run()
+        server.run(debug=True,host='0.0.0.0')
 
     '''
     @name run_scheduler_job
